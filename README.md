@@ -28,19 +28,7 @@ The implementation focuses on performance, caching, and smooth user experience w
 
 ---
 
-## ⚙️ Setup & Running the App
 
-Ensure that your development environment for React Native is properly set up  
-(React Native CLI, Android Studio / Xcode, and required SDKs).
-The application requires an active Android Emulator or iOS Simulator to be running before execution.
-Install project dependencies:
-```bash
-git clone <repository-url>
-cd <project-folder>
-npm install
-npx react-native run-android 
-npx react-native run-ios 
-```
 
 ## 📂 Folder Structure
 ```
@@ -87,9 +75,22 @@ This prevents unnecessary API calls and ensures pagination stops exactly when al
 getNextPageParam: (lastPage) => {
   const { skip, limit, total } = lastPage;
   return skip + limit < total ? (skip / limit) + 2 : undefined;
-}; ```
+};
+```
 
+## ⚙️ Setup & Running the App
 
+Ensure that your development environment for React Native is properly set up  
+(React Native CLI, Android Studio / Xcode, and required SDKs).
+The application requires an active Android Emulator or iOS Simulator to be running before execution.
+Install project dependencies:
+```bash
+git clone <repository-url>
+cd <project-folder>
+npm install
+npx react-native run-android 
+npx react-native run-ios 
+```
 
 
 
